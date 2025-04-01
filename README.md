@@ -9,7 +9,7 @@ using unsupervised clustering techniques and macroeconomic factors.
 - Libraries: `pandas`, `numpy`, `scikit-learn`, `matplotlib`
 
 ## Directory Structure
-- **thesis/**: Contains the LaTeX or Word file for the thesis document.
+- **thesis/**: Contains the LaTeX file for the thesis document.
 - **code/**: Contains Python scripts for data preprocessing, clustering, 
 and modeling.
 - **data/**: Raw and processed datasets.
