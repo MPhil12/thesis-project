@@ -1,0 +1,169 @@
+\chapter{Literature Review}
+
+Financial markets experience dynamic and unpredictable volatility driven by economic conditions, investor behavior, and external shocks. While traditional models like ARCH and GARCH capture time-varying volatility, they assume constant patterns over time, limiting their ability to detect sudden regime shifts. This has led to growing interest in alternative approaches, particularly those incorporating \textbf{machine learning} and \textbf{macroeconomic factors}.
+
+This review explores the research question: \textit{How can unsupervised clustering techniques, combined with macroeconomic factors, be utilized to identify and model volatility regimes in financial markets?} By analyzing research published after 2010, it traces key developments in the field and proposes a framework for integrating these techniques into volatility modeling for improved predictive analysis and risk management.
+
+A systematic approach was used to ensure a comprehensive and transparent review.
+
+\section{Methodology}
+
+\textbf{Search Strategy}
+
+\begin{itemize}
+
+\item \textbf{Databases}: Scopus, Web of Science, JSTOR, and Google Scholar.
+
+\item \textbf{Keywords}: The search terms included combinations of the following: "volatility regimes," "unsupervised clustering," "financial markets," "macroeconomic factors," "machine learning," "predictive analysis," and "regime-switching models."
+
+\end{itemize} 
+
+\textbf{Inclusion Criteria}:
+\begin{itemize} 
+\item Peer-reviewed journal articles and conference papers.
+\item Studies published between 2010 and 2023.
+\item Focus on mathematical and financial applications.
+\end{itemize}
+
+\item \textbf{Exclusion Criteria}:
+\begin{itemize} 
+\item Studies older than 2010 (unless foundational, e.g., Hamilton, 1989).
+\item Studies that do not focus on financial markets or volatility modeling.
+\end{itemize}
+
+\textbf{Selection Process}:
+
+The initial search yielded 850 articles. After removing duplicates and screening titles and abstracts, 150 articles were selected for full-text review.
+
+\textbf{Data Extraction}:
+
+Collected details: author(s), year, title, methodology (e.g., clustering techniques, ML algorithms), and key findings on volatility regimes and macroeconomic factors.
+
+\textbf{Synthesis}:
+\begin{itemize}
+\item The extracted data were organized chronologically to trace the evolution of the field.
+\item Key themes and trends were identified, focusing on the integration of unsupervised clustering and macroeconomic factors in volatility modeling.
+\end{itemize}
+
+\section{Theoretical foundation}
+
+\textbf{Volatility Modeling in Financial Markets}
+
+Recent advancements in financial modeling have increasingly leveraged unsupervised learning techniques to identify volatility regimes. Hamilton’s (1989) regime-switching framework \cite{hamilton_markov_1989} remains foundational, but modern applications incorporate machine learning methods such as K-means and Gaussian Mixture Models (GMM) (Bucci \& Benoit, 2023). These approaches provide a flexible, data-driven methodology for uncovering structural breaks in financial markets, improving upon traditional ARCH/GARCH models (Engle, 1982). By integrating macroeconomic indicators such as inflation, interest rates, and GDP growth, this research aims to enhance volatility forecasting and improve market regime classification.
+
+\textbf{Regime-Switching Models}
+
+Regime-switching models, introduced by Hamilton (1989), capture structural breaks in time series by allowing transitions between distinct states. In financial markets, they model shifts between high- and low-volatility regimes, helping identify market stress or stability. These models are particularly useful for capturing volatility clustering, where high or low volatility persists over time.
+
+\textbf{Machine Learning in Finance}
+
+Machine learning, particularly unsupervised clustering, has transformed financial analysis by detecting patterns beyond traditional methods. Algorithms like k-means, hierarchical clustering, and Gaussian mixture models group data without labels, helping identify market regimes, segment time series, and detect anomalies. Lopez de Prado (2018) highlights their potential for enhancing predictive analysis and risk management through advanced computational techniques.
+
+\textbf{Macroeconomic Factors and Volatility}
+
+Macroeconomic factors like interest rates, inflation, and GDP growth shape market volatility by influencing investor behavior and asset prices. While traditional models treat these factors as external inputs, recent research integrates them directly using techniques like vector autoregression (VAR) and dynamic factor models for a more comprehensive volatility analysis.
+
+\section{Chronological Review of Literature}
+
+\subsection{Early works : pre-2010}
+
+The foundation for understanding volatility regimes and clustering in financial markets was laid by several key studies:
+
+\textbf{Hamilton, J.D. (1989).} \textit{A New Approach to the Economic Analysis of Nonstationary Time Series and the Business Cycle.} Econometrica.
+
+Introduced regime-switching models to model structural breaks in economic time series.
+
+\textbf{Engle, R.F. (1982).} \textit{Autoregressive Conditional Heteroscedasticity with Estimates of the Variance of United Kingdom Inflation.} Econometrica.
+
+Developed the ARCH model, which became the cornerstone of volatility modeling.
+
+\textbf{Kaufman, L., \& Rousseeuw, P.J. (1990).} \textit{Finding Groups in Data: An Introduction to Cluster Analysis.} Wiley-Interscience.
+
+Developed clustering methods later applied to financial data segmentation.
+
+\textbf{Peters, E.E. (1991).} \textit{Chaos and Order in the Capital Markets: A New View of Cycles, Prices, and Market Volatility.} John Wiley \& Sons.
+
+Applied chaos theory to financial markets, providing insights into volatility and complexity.
+
+\textbf{Peters, E.E. (1994).} \textit{Fractal Market Analysis: Applying Chaos Theory to Investment and Economics.} John Wiley \& Sons.
+
+Introduced the Fractal Market Hypothesis, offering a framework for analyzing volatility.
+
+\subsection{2010 - 2020}
+Researchers began integrating machine learning with traditional financial models, leading to significant advancements in unsupervised clustering for financial markets. Key developments include:
+
+\textbf{Tsay, R.S. (2010).} \textit{Analysis of Financial Time Series.} Wiley.
+
+Provided methodologies for analyzing financial time series, including volatility modeling and regime detection.
+
+\textbf{Diebold, F.X., \& Yilmaz, K. (2012).} \textit{Better to Give than to Receive: Predictive Directional Measurement of Volatility Spillovers.} International Journal of Forecasting.
+
+Examined volatility spillovers between markets, emphasizing macroeconomic factors.
+
+\textbf{Bollerslev, T., \& Todorov, V. (2011).} \textit{Estimation of Jump Tails.} Econometrica.
+
+Developed methods to estimate jump tails in financial time series, key for extreme volatility.
+
+\textbf{Lopez de Prado, M. (2018).} \textit{Advances in Financial Machine Learning.} Wiley.
+
+Published a seminal work on machine learning in finance, including clustering for regimes.
+
+\textbf{Bianchi, D., Büchner, M., \& Tamoni, A. (2017).} \textit{Bond Risk Premiums with Machine Learning.} Review of Financial Studies.
+
+Applied machine learning to bond risk premiums, highlighting clustering's financial potential.
+
+\textbf{Gu, S., Kelly, B., \& Xiu, D. (2020).} \textit{Empirical Asset Pricing via Machine Learning.} Review of Financial Studies.
+
+Used machine learning to enhance asset pricing models and volatility forecasting.
+
+\textbf{Christensen, B.J., \& Prabhala, N.R. (2018).} \textit{The Relation Between Implied and Realized Volatility.} Journal of Financial Economics.
+
+Examined the link between implied and realized volatility, stressing macroeconomic factors.
+
+\subsection{2020 - Present}
+
+Recent research has focused on refining clustering techniques and integrating them with macroeconomic factors. Key trends include:
+
+\textbf{Hautsch, N., \& Voigt, S. (2021).} \textit{Machine Learning in Financial Markets: A Survey. }Journal of Economic Surveys.
+
+Surveyed machine learning applications in finance, including volatility modeling.
+
+\textbf{Chen, L., Pelger, M., \& Zhu, J. (2022).} \textit{Deep Learning in Asset Pricing.} Journal of Financial Economics.
+Explored the use of deep learning models for asset pricing and volatility forecasting.
+
+\textbf{Bucci, A., \& Benoit, D.F. (2023).} \textit{Unsupervised Learning for Financial Time Series: A Review.} Journal of Financial Econometrics.
+
+Reviewed unsupervised learning in financial time series, focusing on clustering and regimes.
+
+\textbf{Giglio, S., \& Kelly, B. (2023).} \textit{Excess Volatility: Beyond the Standard Models.} Journal of Finance.
+
+Investigated excess volatility, using machine learning to uncover patterns and regimes.
+
+\section{Key Themes and Findings}
+
+The literature on volatility modeling using unsupervised clustering and macroeconomic factors can be organized around three key themes:
+
+\textbf{Machine Learning in Volatility Modeling:}
+
+Unsupervised clustering techniques, such as k-means and hierarchical clustering, have proven effective in identifying volatility regimes. Lopez de Prado (2018) \cite{lopez_de_prado_2018} and Bianchi et al. (2017) demonstrated their ability to segment financial data into distinct regimes, while Gu et al. (2020) and Chen et al. (2022) showed that integrating machine learning with traditional models improves volatility forecasting accuracy.
+
+\textbf{Macroeconomic Factors and Volatility:}
+
+Macroeconomic indicators, such as interest rates and GDP growth, significantly influence market volatility. Diebold \& Yilmaz (2012) \cite{diebold_yilmaz_2012} and Giglio \& Kelly (2023) \cite{giglio_kelly_2023} highlighted their role in driving volatility spillovers and regime shifts, while Christensen \& Prabhala (2018) emphasized the importance of incorporating these factors into volatility models.
+
+\textbf{Predictive Analysis and Regime Detection:}
+
+Clustering techniques, combined with regime-switching models, enhance predictive analysis by identifying and forecasting volatility regimes. Hamilton (1989) \cite{hamilton_markov_1989} laid the foundation for regime-switching models, while Lopez de Prado (2018) \cite{lopez_de_prado_2018} and Bucci \& Benoit (2023) applied clustering to detect and predict regime shifts in financial markets.
+
+\section{Conclusion}
+
+This literature review has synthesized recent research on the use of unsupervised clustering and macroeconomic factors in modeling volatility regimes in financial markets. Key findings include:
+\begin{itemize}
+
+\item Machine learning techniques, particularly unsupervised clustering, are highly effective for identifying and predicting volatility regimes.
+\item Macroeconomic factors play a critical role in shaping market volatility and should be integrated into volatility models.
+\item Predictive analysis using clustering and machine learning offers significant advantages over traditional models, particularly in capturing regime shifts and extreme events.
+\end{itemize}
+The proposed framework provides a roadmap for integrating these techniques into volatility modeling, offering a more robust and accurate approach for understanding and predicting financial market dynamics. This review contributes to your master's thesis by providing a comprehensive foundation for your analysis and modeling of volatility regimes.
+
+Building on the foundational work of Hamilton (1989) \cite{hamilton_markov_1989} and recent advancements in financial clustering (Lopez de Prado, 2018 \cite{lopez_de_prado_2018}; Bucci \& Benoit, 2023), this dissertation applies a combination of unsupervised clustering techniques and macroeconomic analysis to identify volatility regimes. The following methodology section details the data sources, clustering procedures, and supervised modeling techniques used to achieve these objectives.

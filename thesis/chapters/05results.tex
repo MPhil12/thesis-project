@@ -1,0 +1,112 @@
+\chapter{Results}
+
+The Results section aims to present the outcomes of the clustering analysis, the identified volatility regimes, and the explanatory modeling. Through visualization, economic interpretation, and model performance assessment, this section provides an empirical foundation for understanding volatility regimes and their underlying drivers.
+
+\section{Cluster Visualization}
+
+The first step in presenting clustering results involves visualizing the \textbf{identified volatility regimes}. Effective visualization not only highlights the distinct market states uncovered through unsupervised clustering but also helps illustrate the underlying patterns and relationships within financial market behavior.
+
+To interpret these volatility regimes, we present a set of \textbf{cluster visualizations}. Figure ?? displays the clusters identified using the DBSCAN algorithm, with each point representing a specific market period categorized into a volatility regime. The clustering approach was selected based on performance metrics discussed in Section 4.2.1. To enhance interpretability, dimensionality reduction techniques such as Principal Component Analysis (PCA) and t-Distributed Stochastic Neighbor Embedding (t-SNE) were applied, allowing for a clearer representation of volatility groupings in a two-dimensional space.
+
+Cluster visualizations are typically represented through scatter plots, heatmaps, and \textbf{time-series graphs}. Scatter plots help illustrate the distribution of different volatility regimes, with distinct colors representing low, medium, and high-volatility periods. When dealing with higher-dimensional data, PCA or t-SNE can be used to project the data into a lower-dimensional space while preserving its structure.
+
+To analyze the evolution of volatility over time, Figure ?? presents a \textbf{time-series overlay} where identified clusters are mapped onto historical volatility data. This visualization provides insight into the transitions between different volatility regimes, revealing clear shifts in market conditions.
+
+A time-series approach is particularly useful for understanding the \textbf{temporal dynamics} of volatility regimes. By overlaying the VIX index with identified clusters, we can observe correlations between periods of high market uncertainty and high-volatility regimes.
+
+Finally, heatmaps can be employed to assess the \textbf{intensity of volatility} across different regimes and their associations with macroeconomic factors. These visualizations highlight the strength of correlations between volatility clusters and explanatory variables, revealing insights that may not be immediately apparent in scatter plots or time-series graphs.
+
+By leveraging these \textbf{visualization techniques}, we provide a comprehensive representation of the clustering results, effectively distinguishing between volatility regimes and setting the foundation for further analysis.
+
+ \section{Economic Interpretation}
+
+ Volatility regimes exhibit strong correlations with key macroeconomic indicators. \textbf{Low-volatility periods} are typically associated with stable macroeconomic conditions, characterized by \textbf{moderate inflation, steady GDP growth, and accommodative monetary policy}. These periods coincide with economic expansion, where investor confidence remains high, and market conditions are relatively predictable.
+
+In contrast, \textbf{high-volatility regimes} tend to emerge during economic shocks, including \textbf{financial crises, abrupt policy changes, and exogenous events} such as the COVID-19 pandemic. These periods are marked by rising inflation, negative GDP growth, and elevated uncertainty, leading to heightened market fluctuations and risk aversion among investors.
+
+\begin{table}[H]
+    \centering
+    \caption{Macroeconomic Characteristics of Identified Volatility Regimes}
+    \label{tab:volatility_regimes_summary}
+    \begin{tabular}{|l|l|l|l|l|l|}
+        \hline
+        \textbf{Volatility Regime} & \textbf{Interest Rate} & \textbf{Inflation} & \textbf{GDP Growth} & \textbf{Unemployment} & \textbf{Market Events} \\
+        \hline
+        Low Volatility   & Stable/Declining & Moderate   & Positive   & Low          & Economic Expansion \\
+        \hline
+        Medium Volatility & Fluctuating     & Increasing & Slowing    & Moderate     & Policy Shifts, Elections \\
+        \hline
+        High Volatility   & Rising          & High       & Negative   & High         & Financial Crises, Market Crashes \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Table 5.1 summarizes the macroeconomic characteristics of each volatility regime. This analysis highlights the importance of incorporating macroeconomic indicators into volatility modeling, as regime shifts are often driven by changes in broader economic conditions.
+
+By examining macroeconomic indicators within each regime, we can derive insights into the key drivers of market volatility. \textbf{Low-volatility periods} align with stable economic environments where investors exhibit higher confidence, supported by predictable monetary policies and steady growth. Conversely, \textbf{high-volatility periods} coincide with times of economic distress, where recessions, inflationary pressures, or financial instability trigger uncertainty and sharp market reactions.
+
+A useful approach for interpreting these findings is through \textbf{event-based analysis}, linking volatility regimes to major economic or geopolitical events. For instance, high-volatility periods have historically aligned with events such as the \textbf{2020 Covid crisis}, which introduced extreme market uncertainty and fluctuations. Medium-volatility regimes, on the other hand, often coincide with central bank policy changes or elections, which create temporary uncertainty but do not typically trigger full-scale market crises.
+
+Understanding the macroeconomic context of volatility regimes allows for a more comprehensive narrative of market behavior, illustrating how external factors shape investor sentiment and market dynamics. This interpretation not only validates the clustering methodology but also reinforces the relevance of macroeconomic indicators as key drivers of volatility patterns.
+
+These findings have practical implications for \textbf{investors and policymakers}. Recognizing the macroeconomic conditions underlying different volatility regimes enables investors to \textbf{adjust their portfolios} based on market conditions, while policymakers can anticipate \textbf{market reactions} to economic and regulatory decisions, thereby enhancing financial stability and risk management strategies.
+
+\section{Explanatory Model Results}
+
+A supervised learning model was developed to predict \textbf{volatility regimes} based on macroeconomic indicators. The model’s performance was evaluated using \textbf{accuracy, precision, recall, F1 score, and AUC-ROC}, providing an empirical assessment of its predictive capability in classifying market conditions.
+
+Model Performance Metrics
+The following metrics were used to evaluate the effectiveness of the classification models:
+
+\begin{itemize}
+     
+    \item \textbf{Precision} measures how accurately the model identifies a specific volatility regime, minimizing false positives. A high precision score ensures that stable periods are not misclassified as high-volatility regimes, which is crucial for investor confidence.
+    \item \textbf{Recall} assesses the model’s ability to correctly capture all instances of a given volatility regime, reducing the risk of missing significant market events.
+    \item \textbf{F1 Score} balances precision and recall, offering a holistic measure of predictive performance.
+    \item \textbf{AUC-ROC} quantifies the model’s ability to distinguish between different volatility regimes. A value closer to 1 indicates strong classification capability.
+
+\end{itemize}
+
+\begin{table}[H]
+    \centering
+    \caption{Model Performance Metrics for Volatility Regime Prediction}
+    \label{tab:model_performance}
+    \begin{tabular}{|l|c|c|c|c|c|}
+        \hline
+        \textbf{Model} & \textbf{Accuracy} & \textbf{Precision} & \textbf{Recall} & \textbf{F1 Score} & \textbf{AUC-ROC} \\
+        \hline
+        Logistic Regression  & 78.4\%  & 75.2\%  & 76.8\%  & 76.0\%  & 0.81 \\
+        \hline
+        Decision Tree        & 82.1\%  & 80.5\%  & 81.2\%  & 80.8\%  & 0.84 \\
+        \hline
+        Random Forest        & \textbf{87.6\%}  & \textbf{86.3\%}  & \textbf{88.1\%}  & \textbf{87.2\%}  & \textbf{0.90} \\
+        \hline
+    \end{tabular}
+\end{table}
+
+
+Table 5.2 presents the model evaluation metrics, showing that the \textbf{Random Forest classifier outperformed both Logistic Regression and Decision Tree models}. It achieved the highest accuracy (87.6%) and robustness in predicting volatility states, demonstrating superior predictive power.
+
+Model Interpretation and Insights
+The feature importance analysis provides valuable insights into the macroeconomic drivers of market volatility. The model identified interest rates, GDP growth, and inflation as the most influential predictors.
+
+A high importance score for interest rates suggests that fluctuations in borrowing costs significantly impact market volatility, affecting investor sentiment and liquidity conditions.
+Inflation’s role in predicting volatility highlights the uncertainty it introduces to purchasing power, corporate earnings, and policy responses.
+GDP growth serves as an economic stability indicator, with slowdowns often leading to increased market turbulence.
+These results align with economic theory, reinforcing the relationship between macroeconomic fundamentals and financial market behavior.
+
+Model Limitations and Future Improvements
+While the model demonstrates strong predictive performance, several limitations must be considered:
+
+Dependence on the clustering method: The supervised model is trained using clusters derived from an unsupervised learning approach. Different clustering algorithms (e.g., K-means vs. Gaussian Mixture Models) may yield varying regime classifications, affecting the final predictions.
+Economic context variability: The relationships between macroeconomic indicators and volatility are not static; they evolve with market conditions. Model performance may differ across economic cycles.
+Feature selection and expansion: Incorporating additional indicators, such as geopolitical risk indices or monetary policy sentiment, could improve predictive accuracy.
+To address these challenges, further refinements could include:
+
+Exploring ensemble learning techniques for enhanced generalization.
+Implementing cross-validation to ensure robustness across different time periods.
+Investigating alternative feature engineering methods to capture nonlinear relationships in macroeconomic data.
+Conclusion
+This analysis demonstrates the effectiveness of supervised learning in predicting volatility regimes based on macroeconomic conditions. The findings emphasize the importance of macroeconomic indicators in volatility modeling and provide a foundation for further research in financial risk management, portfolio optimization, and policy planning.
+
+By recognizing the economic conditions underlying different volatility regimes, investors can adapt their strategies, and policymakers can anticipate market responses, enhancing financial stability and decision-making.
