@@ -1,0 +1,98 @@
+Dataset 1: VIX
+Source: Yahoo Finance
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - Close: The closing value of the VIX (Volatility Index) on the given 
+date. This is typically measured in points.
+  - High: The highest value of the VIX during the day, in points.
+  - Low: The lowest value of the VIX during the day, in points.
+  - Open: The opening value of the VIX on the given date, in points.
+  - Volume: The trading volume of the VIX on the given date. This 
+represents the total number of VIX contracts traded.
+
+Dataset 2: SP500
+Source: Yahoo Finance
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - Close: The closing value of the S&P 500 index on the given date.
+  - High: The highest value of the S&P 500 index during the day.
+  - Low: The lowest value of the S&P 500 index during the day.
+  - Open: The opening value of the S&P 500 index on the given date.
+  - Volume: The trading volume for the S&P 500 index on the given date.
+  - Returns: The daily returns of the S&P 500 index, expressed as a 
+percentage change from the previous day's closing value.
+  - Historical_Volatility: The historical volatility of the S&P 500 index, 
+typically calculated using standard deviation of returns over a rolling 
+window.
+
+Dataset 3: Historical Volatility
+Source: Financial Markets Data (various)
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - Historical_Volatility: A measure of the volatility of a financial 
+instrument, typically calculated as the standard deviation of returns over 
+a specific time period.
+
+Dataset 4: GDP Growth
+Source: FRED (Federal Reserve Economic Data)
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - GDP_Growth: The percentage change in GDP from the previous period. 
+Expressed as a percentage (e.g., 2.3%).
+
+Dataset 5: Inflation
+Source: FRED (Federal Reserve Economic Data)
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - Inflation: The rate of inflation as a percentage (e.g., 2.1% 
+year-over-year).
+
+Dataset 6: Interest Rate
+Source: FRED (Federal Reserve Economic Data)
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - Interest_Rate: The Federal Reserve interest rate (expressed as a 
+percentage). Typically the federal funds rate.
+
+Dataset 7: Money Supply
+Source: FRED (Federal Reserve Economic Data)
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - Money_Supply: The total money supply in the economy (measured as M2, 
+in billions of dollars).
+
+Dataset 8: TED Spread
+Source: FRED (Federal Reserve Economic Data)
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - TED_Spread: The difference between the 3-month LIBOR (London Interbank 
+Offered Rate) and the 3-month T-bill rate, used to assess credit risk in 
+the economy. Values are in percentage points (e.g., 0.5%).
+
+Dataset 9: Unemployment Rate
+Source: FRED (Federal Reserve Economic Data)
+Variables:
+  - Date: Date of observation (format: YYYY-MM-DD).
+  - Unemployment_Rate: The percentage of the labor force that is 
+unemployed. Values range from 0 to 100, representing the unemployment rate 
+in percentage points.
+
+---
+
+### **Handling Missing Values**:
+
+- **Interest Rate, Inflation, GDP Growth, Unemployment Rate, Money 
+Supply**: These datasets have **1938 missing values each** before 
+preprocessing. During preprocessing, these missing values were likely 
+filled using methods like forward filling or interpolation.
+- **TED Spread**: This dataset has **67 missing values**, which might have 
+been handled similarly during preprocessing.
+
+---
+
+### **Notes**:
+- All datasets contain **numerical values** except for the `Date` column, 
+which is a standard datetime format (YYYY-MM-DD).
+- The missing values were handled during preprocessing, using 
+forward filling techniques. Any remaining missing values 
+were excluded from further analysis or imputed.
