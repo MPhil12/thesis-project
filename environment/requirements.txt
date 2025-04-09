@@ -1,0 +1,17 @@
+# Financial and economic data access
+yfinance==0.2.55
+fredapi==0.5.2
+
+# Core dependencies
+pandas==1.5.3
+numpy==1.24.0
+
+# Machine learning libraries
+scikit-learn==1.1.3
+xgboost==1.4.2
+
+# Visualization tools
+matplotlib==3.6.3
+seaborn==0.11.2
+
+
