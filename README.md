@@ -21,14 +21,17 @@ The project is organized as follows:
 - **`thesis/`**: Contains the LaTeX file for the thesis document (`main.tex`), along with any additional thesis-related files such as figures, tables, and references.
   
 - **`code/`**: Contains Python scripts for data preprocessing, machine learning model development, and clustering. This includes:
-  - **`data_preprocessing.py`**: For cleaning and transforming raw data.
-  - **`clustering_model.py`**: For implementing clustering techniques like K-Means, GMM, DBSCAN.
-  - **`xgboost_model.py`**: For implementing the XGBoost model for supervised learning.
+  - **`data_preprocessing.ipynb`**: For cleaning and transforming raw data.
+  - **`clustering_model.ipynb`**: For implementing clustering techniques like K-Means, GMM, DBSCAN.
+  - **`xgboost_model.ipynb`**: For implementing the XGBoost model for supervised learning.
+  - **`thesis.ipynb`**: A Jupyter notebook containing all parts of the project, including data processing, clustering, and model implementation, following each other in a structured way.
 
 - **`data/`**: Contains both raw and processed datasets, such as:
   - **`raw_data/`**: Unprocessed data (e.g., downloaded from FRED or Yahoo Finance).
   - **`processed_data/`**: Cleaned and preprocessed data, ready for analysis.
   - **`data_dictionary.txt`**: A file that describes the datasets and the variables within them.
+  - **`clustered_data/`**: Contains data after applying clustering techniques (e.g., K-Means or DBSCAN).
+  - **`macroeconomic_data/`**: Contains macroeconomic indicators used for analysis (e.g., inflation, unemployment rate, GDP growth).
 
 - **`results/`**: Contains figures, tables, and outputs generated from the analysis:
   - **`figures/`**: Plots and visualizations generated during the analysis (e.g., clusters, time-series graphs).
