@@ -12,7 +12,7 @@ The project requires the following Python libraries:
 - `numpy`: Numerical computing.
 - `scikit-learn`: Machine learning models and algorithms.
 - `matplotlib`: Data visualization.
-- **Note**: If you're using a specific environment manager (like `conda`), check the **`environment/requirements.txt`** or **`environment/environment.yml`** for exact package versions.
+- **Note**: If you're using a specific environment manager (like `conda`), check the **`environment/requirements.txt`**  
 
 ## Directory Structure
 
